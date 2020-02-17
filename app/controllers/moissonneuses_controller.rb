@@ -1,5 +1,4 @@
 class MoissonneusesController < ApplicationController
-
   def new
     @moissonneuse = Moissonneuse.new
   end
