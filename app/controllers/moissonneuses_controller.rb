@@ -1,0 +1,2 @@
+class MoissonneusesController < ApplicationController
+end
