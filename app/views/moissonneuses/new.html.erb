@@ -1,0 +1,19 @@
+<div class="container-fluid" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url('https://images.unsplash.com/17/unsplash_527bf5fd7f5f6_1.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80'); background-repeat: no-repeat; background-size: cover; background-position: bottom;">
+  <div class="row pt-3">
+    <div class="col-4 offset-4">
+      <%= simple_form_for(@moissonneuse) do |f| %>
+        <%= f.input :name, label: "Nom", error: "Veuillez indiquer votre nom"  %>
+        <%= f.input :address, label: 'Adresse', errror: "Veuillez renseigner votre code postal. ex: 69"  %>
+        <%= f.input :brand, label: "Marque du véhicule", error: "Veuillez choisir dans la liste la marque de votre moissonneuse-batteuse" %>
+        <%= f.input :model, label: 'Modèle', error: "Indiquez le modèle" %>
+        <%= f.input :description, error: "Veuillez renseigner minimum 200 caractères" %>
+        <%= f.input :photo, as: :file %>
+          <div class="btn w-100">
+            <%= f.submit "Enregistrer ma demande" %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
