@@ -16,6 +16,6 @@ class MoissonneusesController < ApplicationController
   private
 
   def moissonneuse_params
-    params.require(@moissonneuse).permit(:name, :power, :description, :brand, :model, :address, photos: [])
+    params.require(@moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :photo)
   end
 end

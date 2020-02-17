@@ -7,7 +7,7 @@
         <%= f.input :brand, label: "Marque du véhicule", error: "Veuillez choisir dans la liste la marque de votre moissonneuse-batteuse" %>
         <%= f.input :model, label: 'Modèle', error: "Indiquez le modèle" %>
         <%= f.input :description, error: "Veuillez renseigner minimum 200 caractères" %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.input :photo, as: :file %>
           <div class="btn w-100">
             <%= f.submit "Enregistrer ma demande" %>
           </div>
