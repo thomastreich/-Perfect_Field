@@ -8,7 +8,7 @@
   <div class="cards-index my-2">
     <% @moissonneuses.each do |moissonneuse| %>
         <div class="card-product-index">
-          <img src="<%= cl_image_path moissonneuse.photo.key, alt: "alttext" %>" />
+          <%= cl_image_tag moissonneuse.photo.key, alt: "alttext" %>
           <div class="card-product-infos-index">
             <h2><%= moissonneuse.name %></h2>
             <p><%= moissonneuse.description %></p>
