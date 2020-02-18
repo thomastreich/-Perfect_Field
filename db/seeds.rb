@@ -1,2 +1,1 @@
-
 Moissonneuse.destroy_all
