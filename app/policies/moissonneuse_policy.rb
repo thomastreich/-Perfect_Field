@@ -1,4 +1,10 @@
 class MoissonneusePolicy < ApplicationPolicy
+  class Scope < Scope
+    def resolve
+      scope.all
+    end
+  end
+
   def create?
     true
   end
@@ -11,9 +17,4 @@ class MoissonneusePolicy < ApplicationPolicy
     record.user == user
   end
 
-  class Scope < Scope
-    def resolve
-      scope.all
-    end
-  end
 end

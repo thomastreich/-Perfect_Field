@@ -1,21 +1,22 @@
 class MoissonneusesController < ApplicationController
+  before_action :set_moissonneuse, only: [:show, :edit, :update, :destroy]
+
   def index
-    @moissonneuses = policy_scope(Moissonneuse).order(created_at: :desc)
+    @moissonneuses = policy_scope(Moissonneuse).sample(12)
   end
 
-    def show
-      @moissonneuse = Moissonneuse.find(params[:id])
-      authorize @moissonneuse
-    end
+  def show
+  end
 
   def new
     @moissonneuse = Moissonneuse.new
+    authorize @moissonneuse
   end
 
   def create
     @moissonneuse = Moissonneuse.new(moissonneuse_params)
-    @moissonneuse.user = current_user
     authorize @moissonneuse
+    @moissonneuse.user = current_user
     if @moissonneuse.save!
       redirect_to moissonneuse_path(@moissonneuse)
     else
@@ -24,25 +25,25 @@ class MoissonneusesController < ApplicationController
   end
 
   def edit
-   @moissonneuse = Moissonneuse.find(params[:id])
   end
 
   def update
-    @moissonneuse = Moissonneuse.find(params[:id])
     @moissonneuse.user = current_user
     @moissonneuse.update(moissonneuse_params)
     redirect_to moissonneuse_path(@moissonneuse)
   end
 
-  end
-
   def destroy
-    @moissonneuse = Moissonneuse.find(params[:id])
     @moissonneuse.destroy
     redirect_to root_path
   end
 
   private
+
+  def set_moissonneuse
+    @moissonneuse = Moissonneuse.find(params[:id])
+    authorize @moissonneuse
+  end
 
   def moissonneuse_params
     params.require(:moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :photo)

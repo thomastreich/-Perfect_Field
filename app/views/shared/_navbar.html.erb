@@ -41,9 +41,9 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <% if policy(Moissonneuse).create? %>
-            <%= link_to "Proposer une moissonneuse", new_moissonneuse_path, class: "nav-link" %>
-          <% end %>
+          <%# if policy(Moissonneuse).create? %>
+            <%#= link_to "Proposer une moissonneuse", new_moissonneuse_path, class: "nav-link" %>
+          <%# end %>
         </li>
         <li class="nav-item">
           <%= link_to "Inscription", new_user_registration_path, class: "nav-link" %>
