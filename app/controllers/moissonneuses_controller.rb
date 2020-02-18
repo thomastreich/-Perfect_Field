@@ -3,6 +3,10 @@ class MoissonneusesController < ApplicationController
     @moissonneuses = Moissonneuse.all
   end
 
+    def show
+      @moissonneuse = Moissonneuse.find(params[:id])
+    end
+
   def new
     @moissonneuse = Moissonneuse.new
   end
@@ -11,7 +15,7 @@ class MoissonneusesController < ApplicationController
     @moissonneuse = Moissonneuse.new(moissonneuse_params)
     @moissonneuse.user = current_user
     if @moissonneuse.save!
-      redirect_to moissonneuses_path
+      redirect_to moissonneuse_path(@moissonneuse)
     else
       render :new
     end
