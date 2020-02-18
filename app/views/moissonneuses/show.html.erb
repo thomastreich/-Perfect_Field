@@ -1,17 +1,35 @@
-<div class="container">
-  <%= cl_image_tag(@moissonneuse.photo.key, width: 400, height: 300, crop: :fill) %>
-    <div class="btn btn-info">
-      <%= link_to 'Retour à la liste des Moissonneuses', moissonneuses_path %>
+<div class="container d-flex">
+  <div class="row p-0">
+    <div class="rounded p-3">
+      <%= cl_image_tag(@moissonneuse.photo.key, width: 400, height: 300, crop: :fill) %>
     </div>
-  <div class="btn btn-warning">
-    <%= link_to 'Supprimer ma Moissonneuse', moissonneuses_path %>
-  </div>
 
-  <form action="text" class="description_text">
-    <div class="titre_name">
-      <h5><strong>Name :</strong> <%= @moissonneuse.name %></h5>
-        <br>
-      <h5><strong>Description : </strong></h5>
-       </div>
-  </form>
+      <div class="contain-infos p-3">
+          <div class="btn btn-success">
+            <%= link_to 'Retour à la liste des Moissonneuses', moissonneuses_path %>
+          </div>
+          <div class="btn btn-dark">
+            <i class="far fa-trash-alt"></i>
+              <%= link_to '', moissonneuses_path %>
+          </div>
+          <form action="text" class="description_text pt-3">
+            <div class="titre_name">
+              <h5><strong>Name :</strong> <%= @moissonneuse.name %></h5>
+              <br>
+              <h5><strong>Description : </strong></h5>
+              <p><%= @moissonneuse.description %></p>
+            </div>
+        </form>
+      </div>
+  </div>
+  <div class="lines offset-12 border w-100 h-100 m-3 p-2">
+    <p>Ajoutez des dates pour voir le prix</p>
+   <%= simple_form_for(@moissonneuse) do |f| %>
+      <%= f.input :name, label: "Dates", error: "Veuillez indiquer les dates de location", placeholder: "dd/mm/yy"  %>
+      <%= f.input :address, label: 'Nombre de Moissonneuses', collection: [1,2], errror: "Veuillez renseigner votre code postal. ex: 69"  %>
+        <div class="btn w-100"><i class="far fa-eye"></i>
+        </div>
+    <% end %>
+  </div>
 </div>
+
