@@ -10,7 +10,7 @@ class MoissonneusesController < ApplicationController
   def create
     @moissonneuse = Moissonneuse.new(moissonneuse_params)
     if @moissonneuse.save
-      redirect_to moissonneuse_path
+      redirect_to moissonneuses_path
     else
       render :new
     end
