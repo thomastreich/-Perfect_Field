@@ -1,17 +1,21 @@
-<div class="container">
+<div class="rounded p-3">
   <%= cl_image_tag(@moissonneuse.photo.key, width: 400, height: 300, crop: :fill) %>
-    <div class="btn btn-info">
-      <%= link_to 'Retour à la liste des Moissonneuses', moissonneuses_path %>
-    </div>
-  <div class="btn btn-warning">
-    <%= link_to 'Supprimer ma Moissonneuse', moissonneuses_path %>
-  </div>
-
-  <form action="text" class="description_text">
-    <div class="titre_name">
-      <h5><strong>Name :</strong> <%= @moissonneuse.name %></h5>
-        <br>
-      <h5><strong>Description : </strong></h5>
-       </div>
-  </form>
 </div>
+
+  <div class="container">
+      <div class="btn btn-success">
+        <%= link_to 'Retour à la liste des Moissonneuses', moissonneuses_path %>
+      </div>
+      <div class="btn btn-dark">
+        <i class="far fa-trash-alt"></i>
+          <%= link_to '', moissonneuses_path %>
+      </div>
+      <form action="text" class="description_text pt-3">
+        <div class="titre_name">
+          <h5><strong>Name :</strong> <%= @moissonneuse.name %></h5>
+          <br>
+          <h5><strong>Description : </strong></h5>
+          <p><%= @moissonneuse.description %></p>
+        </div>
+    </form>
+  </div>
