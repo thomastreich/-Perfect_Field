@@ -9,8 +9,9 @@
             <%= link_to 'Retour à la liste des Moissonneuses', moissonneuses_path %>
           </div>
           <div class="btn btn-dark">
-            <i class="far fa-trash-alt"></i>
-              <%= link_to '', moissonneuses_path %>
+            <%= link_to moissonneuses_path, method: :delete, data: { confirm: "Vous êtes sur?" } do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
           </div>
           <form action="text" class="description_text pt-3">
             <div class="titre_name">
