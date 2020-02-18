@@ -17,4 +17,7 @@ class MoissonneusePolicy < ApplicationPolicy
     record.user == user
   end
 
+  def show?
+    record.user == user
+  end
 end
