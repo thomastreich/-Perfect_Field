@@ -4,17 +4,18 @@
   </div>
 </div>
 
-<div class="cards-index my-2">
-  <% @moissonneuses.each do |moissonneuse| %>
-    <% link_to moissonneuse_path(moissonneuse) do %>
-      <div class="card-product-index">
-        <img src="<%= cl_image_path moissonneuse.photo.key, alt: "alttext" %>" />
-        <div class="card-product-infos-index">
-          <h2><%= moissonneuse.name %></h2>
-          <p><%= moissonneuse.description %></p>
+<div class="main-container">
+  <div class="cards-index my-2">
+    <% @moissonneuses.each do |moissonneuse| %>
+        <div class="card-product-index">
+          <img src="<%= cl_image_path moissonneuse.photo.key, alt: "alttext" %>" />
+          <div class="card-product-infos-index">
+            <h2><%= moissonneuse.name %></h2>
+            <p><%= moissonneuse.description %></p>
+          </div>
         </div>
-      </div>
-    <% end %>
-  <% end %>
+      <% end %>
+  </div>
+  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic3RyYWQiLCJhIjoiY2s2MjhrZnhjMGFxMTNrbzA2aDJnYW1icSJ9.880z3GiHa3uW3tpsnR83Hg'>
 </div>
 

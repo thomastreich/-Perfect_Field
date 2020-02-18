@@ -9,8 +9,9 @@ class MoissonneusesController < ApplicationController
 
   def create
     @moissonneuse = Moissonneuse.new(moissonneuse_params)
-    if @moissonneuse.save
-      redirect_to moissonneuse_path
+    @moissonneuse.user = current_user
+    if @moissonneuse.save!
+      redirect_to moissonneuses_path
     else
       render :new
     end
@@ -19,6 +20,6 @@ class MoissonneusesController < ApplicationController
   private
 
   def moissonneuse_params
-    params.require(@moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :photo)
+    params.require(:moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :photo)
   end
 end
