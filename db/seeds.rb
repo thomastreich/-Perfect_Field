@@ -11,7 +11,8 @@ User.destroy_all
 
 puts 'Creating users...'
 
-user_1 = User.create!(email: "astrid@gmail.com", password: "AstridAubert")
+user_1 = User.create!(email: "astrid@gmail.com", password: "Astrid")
+user_2 = User.create!(email: "astridaubert@gmail.com", password: "AstridAubert")
 
 puts "Finished users' creation!"
 
@@ -25,5 +26,13 @@ moissonneuse_1 = Moissonneuse.create!(name: 'moissonneuse 1',
   brand: "Massey Ferguson",
   model: "model 1",
   user: user_1)
+
+moissonneuse_2 = Moissonneuse.create!(name: 'moissonneuse 2',
+  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
+  power: "power 2",
+  address: "address 2",
+  brand: "Massey Ferguson",
+  model: "model 2",
+  user: user_2)
 
 puts "Finished moisssonneuses' creation!"
