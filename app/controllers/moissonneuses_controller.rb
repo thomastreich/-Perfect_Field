@@ -3,6 +3,10 @@ class MoissonneusesController < ApplicationController
     @moissonneuses = Moissonneuse.all
   end
 
+    def show
+      @moissonneuse = Moissonneuse.find(params[:id])
+    end
+
   def new
     @moissonneuse = Moissonneuse.new
   end
