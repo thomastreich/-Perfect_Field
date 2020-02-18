@@ -13,6 +13,11 @@
   object-fit: cover;
 }
 
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .card-product-index h2 {
   font-size: 16px;
   font-weight: bold;
@@ -35,6 +40,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  flex-grow: 1;
+  padding-top: 16px;
+  padding-right: 16px;
 }
 
 // Smallest device

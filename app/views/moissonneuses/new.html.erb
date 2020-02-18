@@ -9,6 +9,7 @@
         <%= f.input :power, label: 'Puissance (CV)', error: "Indiquez la puissance du véhicule ( CV )" %>
         <%= f.input :description, error: "Veuillez renseigner minimum 50 caractères" %>
         <%= f.input :photo, as: :file %>
+        <%#= f.input :user, as: :hidden, input_html: {value: current_user.id } %>
           <div class="btn w-100">
             <%= f.submit "Enregistrer ma demande" %>
           </div>
