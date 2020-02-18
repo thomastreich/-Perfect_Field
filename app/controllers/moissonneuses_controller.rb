@@ -1,5 +1,24 @@
 class MoissonneusesController < ApplicationController
   def index
-    raise
+    @moissonneuses = Moissonneuse.all
+  end
+
+  def new
+    @moissonneuse = Moissonneuse.new
+  end
+
+  def create
+    @moissonneuse = Moissonneuse.new(moissonneuse_params)
+    if @moissonneuse.save
+      redirect_to moissonneuse_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def moissonneuse_params
+    params.require(@moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :photo)
   end
 end
