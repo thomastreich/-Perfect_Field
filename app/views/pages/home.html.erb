@@ -1,2 +1,79 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/17/unsplash_527bf5fd7f5f6_1.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);">
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+      <h1> Je ne crains <strong>plus personne</strong></h1>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <h1> en <strong>Massey Fergusson</strong>!</h1>
+    </div>
+     <div class="d-flex justify-content-center align-items-center m-4 px-0 pb-3">
+      <form action="#" class="simple_form search-form d-flex justify-content-center align-items-center mt-4", method="get">
+        <div class="form-group string required search_query mb-0 mr-1">
+          <input class="form-control string required" type="text" placeholder="Région">
+        </div>
+        <div class="form-group string required search_from_date mb-0 mr-1">
+          <input class="form-control string required date-field-input" type="text" placeholder="Date de début">
+        </div>
+        <div class="form-group string required search_from_date mb-0 mr-1">
+          <input class="form-control string required date-field-input" type="date" placeholder="Date de fin" min="Date.today" max="2020-12-31">
+        </div>
+        <div class="form-group string required search_query mb-0 mr-1">
+          <button name="button" type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center m-4">
+    <h2>Nos Tops moissonneuses du moment ! </h2>
+  </div>
+  <div class="cards">
+
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1507311036505-05669fc503cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80">
+    <div class="card-trip-infos">
+      <div>
+        <h2>Moissonneuse Super</h2>
+        <p>Meilleure moissonneuse du moment !</p>
+      </div>
+      <h2 class="card-trip-pricing">€70,000</h2>
+<!--       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+    </div>
+  </div>
+
+
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1560437165-0d74e3cbdb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Moissonneuse VLPC5</h2>
+        <p>Rapport qualité prix garanti </p>
+      </div>
+      <h2 class="card-trip-pricing">€22,000</h2>
+ <!--      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1507662228758-08d030c4820b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Moissonneuse Super +</h2>
+        <p>Un modèle révolutionnaire</p>
+      </div>
+      <h2 class="card-trip-pricing">€50,000</h2>
+<!--       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row justify-content-center m-4">
+    <%= link_to "Découvrez tous nos moissonneuses", moissonneuses_path, class: "btn btn-primary" %>
+  </div>
+</div>
