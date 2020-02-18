@@ -14,6 +14,9 @@
               <h2><%= moissonneuse.name %></h2>
               <p><%= moissonneuse.description %></p>
             </div>
+            <% if policy(moissonneuse).edit? %>
+              <%= link_to "Modifier", edit_moissonneuse_path(moissonneuse), class: "btn btn-primary" %>
+            <% end %>
           </div>
         <% end %>
       <% end %>
