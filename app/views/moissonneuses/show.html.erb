@@ -1,27 +1,34 @@
 <div class="container d-flex">
   <div class="card-trip w-100 m-3">
-    <%= cl_image_tag(@moissonneuse.photo.key, width: 400, height: 300, crop: :fill) %>
+    <%= cl_image_tag(@moissonneuse.photo.key, crop: :fill) %>
     <div class="card-trip-infos">
       <div>
         <h2><%= @moissonneuse.name %></h2>
         <p><strong>Description : </strong></p>
         <p><%= @moissonneuse.description %></p>
-        <p><strong>Nombre de chevaux : </strong><%= @moissonneuse.power %></p>
+        <p><strong>Nombre de CV : </strong><%= @moissonneuse.power %></p>
         <p><strong>Modèle : </strong><%= @moissonneuse.model %></p>
         <p><strong> Marque : </strong><%= @moissonneuse.brand %></p>
       </div>
-      <h2 class="card-trip-pricing">£99.99</h2>
-      <div class="btn btn-light ml-3">
-        <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
-          <i class="far fa-trash-alt"></i>
-        <% end %>
+      <h2 class="card-trip-pricing"> 1000€/jours</h2>
+      <div class="buttons_switch d-flex">
+        <div class="btn btn-light ">
+          <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+        </div>
+        <div class="btn btn-light ml-2 ">
+          <%= link_to edit_moissonneuse_path(@moissonneuse), class: "edited" do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
   <div class="text-description pt-2 text-center">
   </div>
   <div class="lines offset-12 border w-100 h-100 m-3 p-2">
-    <p>Ajoutez des dates pour voir le prix</p>
+    <p>Ajoutez des dates pour voir le prix : </p>
     <form action="#" class="simple_form search-form", method="get">
       <div class="form-group string required search_from_date mb-0 mr-1 pb-4">
         <label for="datedebut"> Date de début : </label>
@@ -36,4 +43,6 @@
     </form>
   </div>
 </div>
+  <%= link_to 'Revenir à la liste des moissonneuses', moissonneuses_path(@moissonneuse), id: "link" %>
+
 
