@@ -1,5 +1,5 @@
 class MoissonneusesController < ApplicationController
-  before_action :set_moissonneuse, only: [:show, :edit, :update, :destroy]
+  before_action :set_moissonneuse, only: [:edit, :update, :destroy]
 
   def index
     @moissonneuses = policy_scope(Moissonneuse).sample(12)
