@@ -1,5 +1,5 @@
 class MoissonneusesController < ApplicationController
-  before_action :set_moissonneuse, only: [:show, :edit, :update, :destroy]
+  before_action :set_moissonneuse, only: [:edit, :update, :destroy]
 
   def index
     @moissonneuses = policy_scope(Moissonneuse).sample(12)
@@ -51,6 +51,6 @@ class MoissonneusesController < ApplicationController
   end
 
   def moissonneuse_params
-    params.require(:moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :photo)
+    params.require(:moissonneuse).permit(:name, :power, :description, :brand, :model, :address, :price, :photo)
   end
 end
