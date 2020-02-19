@@ -7,6 +7,7 @@ import "bootstrap";
 
 import flatpickr from "flatpickr";
 import { initMapbox } from '../plugins/init_mapbox';
+// import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 
 document.addEventListener('turbolinks:load', () => {

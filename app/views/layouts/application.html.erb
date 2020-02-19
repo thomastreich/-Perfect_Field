@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Perfect Field</title>
     <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
     <%= render 'shared/flashes' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </body>
 </html>
