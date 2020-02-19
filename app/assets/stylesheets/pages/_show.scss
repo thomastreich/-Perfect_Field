@@ -43,3 +43,38 @@
   width: 40px;
 }
 
+.btn-light {
+  right: 50px;
+  bottom: 137px;
+}
+
+.btn-secondary {
+  bottom: 137px;
+  right: 3px;
+  background-color: #E2E6EA;
+  color: #457ACB;
+  border: none;
+}
+
+.lines p {
+  font-size: 20px;
+  font-family: serif;
+}
+
+#link {
+  margin-left: 145px;
+  color: #1C4752;
+  text-decoration: none;
+  &:hover {
+    font-size: 18px;
+    color: #333333;
+    padding: 5px;
+    border-radius: 8px;
+  }
+}
+.buttons_switch {
+  position: absolute;
+  top: -15px;
+  right: 7px;
+}
+
