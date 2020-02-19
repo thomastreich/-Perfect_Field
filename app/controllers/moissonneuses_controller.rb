@@ -6,7 +6,8 @@ class MoissonneusesController < ApplicationController
     @markers = @moissonneuses.geocoded.map do |moissonneuse|
       {
         lat: moissonneuse.latitude,
-        lng: moissonneuse.longitude
+        lng: moissonneuse.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { moissonneuse: moissonneuse })
       }
     end
   end

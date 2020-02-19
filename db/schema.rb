@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_02_18_150429) do
-=======
 ActiveRecord::Schema.define(version: 2020_02_19_092719) do
->>>>>>> 0f29625fefcf0c271db50461adb0a98594c8d9b6
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,12 +57,9 @@ ActiveRecord::Schema.define(version: 2020_02_19_092719) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
     t.float "latitude"
     t.float "longitude"
-=======
     t.integer "price"
->>>>>>> 0f29625fefcf0c271db50461adb0a98594c8d9b6
     t.index ["user_id"], name: "index_moissonneuses_on_user_id"
   end
 

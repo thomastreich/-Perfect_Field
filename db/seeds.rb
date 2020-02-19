@@ -14,8 +14,8 @@ puts 'Creating moissonneuses...'
 
 moissonneuse_1 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2020',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Moi je te la loue après t\'en fais ce que tu veux gadjo',
+address: '77000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -27,8 +27,8 @@ moissonneuse_1.save!
 
 moissonneuse_2 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2019',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Elle est belle, elle coupe et ramasse bien le blé',
+address: '37000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -40,8 +40,8 @@ moissonneuse_2.save!
 
 moissonneuse_3 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2018',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '21000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -53,8 +53,8 @@ moissonneuse_3.save!
 
 moissonneuse_4 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2017',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '38000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -66,8 +66,8 @@ moissonneuse_4.save!
 
 moissonneuse_5 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2016',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '29200',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -79,8 +79,8 @@ moissonneuse_5.save!
 
 moissonneuse_6 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2015',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '90400',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -92,8 +92,8 @@ moissonneuse_6.save!
 
 moissonneuse_7 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2014',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '59000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -105,8 +105,8 @@ moissonneuse_7.save!
 
 moissonneuse_8 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2013',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '63000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -118,8 +118,8 @@ moissonneuse_8.save!
 
 moissonneuse_9 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2012',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '56000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -131,8 +131,8 @@ moissonneuse_9.save!
 
 moissonneuse_10 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2011',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '22000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -144,8 +144,8 @@ moissonneuse_10.save!
 
 moissonneuse_11 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2010',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '70000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -157,8 +157,8 @@ moissonneuse_11.save!
 
 moissonneuse_12 = Moissonneuse.new(
 name: 'Moissonneuse-batteuse 2009',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment. Jolie machine. Bon rapport qualité prix. Top du moment',
-address: %w(75000 77000 37000 21000 38000).sample,
+description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+address: '24100',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
