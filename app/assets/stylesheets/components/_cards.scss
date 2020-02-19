@@ -34,6 +34,7 @@
 
 .card-product-index .card-product-infos-index {
   padding: 16px;
+  color: black;
 }
 
 .cards-index {
@@ -41,7 +42,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
-  padding-top: 16px;
+  // padding-top: 16px;
   padding-right: 16px;
   height: 100%;
   width: 100%;
