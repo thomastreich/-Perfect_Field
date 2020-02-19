@@ -10,6 +10,11 @@ class MoissonneusesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { moissonneuse: moissonneuse })
       }
     end
+
+    if params[:search] && params[:search][:region].present?
+      @moissonneuses = @moissonneuses.where(region: params[:search][:region])
+    end
+
   end
 
   def show
