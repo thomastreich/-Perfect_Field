@@ -1,5 +1,5 @@
 class MoissonneusesController < ApplicationController
-  before_action :set_moissonneuse, only: [:edit, :update, :destroy]
+  before_action :set_moissonneuse, only: [:show, :edit, :update, :destroy]
 
   def index
     @moissonneuses = policy_scope(Moissonneuse).limit(12)
@@ -10,11 +10,9 @@ class MoissonneusesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { moissonneuse: moissonneuse })
       }
     end
-
     if params[:search] && params[:search][:region].present?
       @moissonneuses = @moissonneuses.where(region: params[:search][:region])
     end
-
   end
 
   def show
@@ -29,7 +27,7 @@ class MoissonneusesController < ApplicationController
     @moissonneuse = Moissonneuse.new(moissonneuse_params)
     authorize @moissonneuse
     @moissonneuse.user = current_user
-    if @moissonneuse.save!
+    if @moissonneuse.save
       redirect_to moissonneuse_path(@moissonneuse)
     else
       render :new
