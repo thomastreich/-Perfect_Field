@@ -10,6 +10,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 
 // document.addEventListener('turbolinks:load', () => {
-  if (document.querySelector('#map')) initMapbox();
-  if (document.querySelector('.flatpickr')) flatpickr(".flatpickr", {});
+  if (document.querySelector('#map')) {
+    initMapbox();
+  }
+  if (document.querySelector('.flatpickr')) {
+    flatpickr(".flatpickr", {});
+  }
 // })
