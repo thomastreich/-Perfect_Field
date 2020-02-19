@@ -1,26 +1,27 @@
 <div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470685983317-0084951ce1ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80);">
-  <div class="container color-white">
-    <h3>Plus de 200 moissonneuses disponibles dans votre région !</h3>
+  <div class="container">
+    <h1>Trouvez moissonneuse à votre botte !</h1>
   </div>
 </div>
 
 <div class="main-container">
   <div class="cards-index my-2">
     <% @moissonneuses.each do |moissonneuse| %>
-        <%= link_to moissonneuse_path(moissonneuse), class: "text-decoration-none" do %>
-          <div class="card-product-index">
-            <%= cl_image_tag moissonneuse.photo.key, alt: "alttext" %>
-            <div class="card-product-infos-index">
-              <h2><%= moissonneuse.name %></h2>
-              <p><%= moissonneuse.description %></p>
-            </div>
-            <% if policy(moissonneuse).edit? %>
-              <%= link_to "Modifier", edit_moissonneuse_path(moissonneuse), class: "btn btn-primary" %>
-            <% end %>
+      <%= link_to moissonneuse_path(moissonneuse), class: "text-decoration-none" do %>
+        <div class="card-product-index" >
+          <%= cl_image_tag moissonneuse.photo.key, alt: "alttext" %>
+          <div class="card-product-infos-index">
+            <h2><%= moissonneuse.name %></h2>
+            <p><%= moissonneuse.description %></p>
+            <p id="price"><%= moissonneuse.price %>€/jour</p>
           </div>
-        <% end %>
+        </div>
       <% end %>
+    <% end %>
   </div>
-  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic3RyYWQiLCJhIjoiY2s2MjhrZnhjMGFxMTNrbzA2aDJnYW1icSJ9.880z3GiHa3uW3tpsnR83Hg'>
+  <div id="map" style="width: 1600px;
+     height: 100vh;" class="my-2" data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 

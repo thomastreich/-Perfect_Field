@@ -2,7 +2,14 @@ class MoissonneusesController < ApplicationController
   before_action :set_moissonneuse, only: [:edit, :update, :destroy]
 
   def index
-    @moissonneuses = policy_scope(Moissonneuse).sample(12)
+    @moissonneuses = policy_scope(Moissonneuse).limit(12)
+    @markers = @moissonneuses.geocoded.map do |moissonneuse|
+      {
+        lat: moissonneuse.latitude,
+        lng: moissonneuse.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { moissonneuse: moissonneuse })
+      }
+    end
 
     if params[:search] && params[:search][:region].present?
       @moissonneuses = @moissonneuses.where(region: params[:search][:region])
