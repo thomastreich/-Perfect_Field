@@ -3,6 +3,11 @@ class MoissonneusesController < ApplicationController
 
   def index
     @moissonneuses = policy_scope(Moissonneuse).sample(12)
+
+    if params[:search] && params[:search][:region].present?
+      @moissonneuses = @moissonneuses.where(region: params[:search][:region])
+    end
+
   end
 
   def show
