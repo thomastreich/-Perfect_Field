@@ -1,11 +1,11 @@
 <div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470685983317-0084951ce1ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80);">
   <div class="container">
-    <h1>Trouvez moissonneuse à votre botte !</h1>
+    <h2>Trouvez moissonneuse à votre botte !</h2>
   </div>
 </div>
 
 <div class="main-container">
-  <div class="cards-index my-2">
+  <div class="cards-index my-2 ml-2">
     <% @moissonneuses.each do |moissonneuse| %>
       <%= link_to moissonneuse_path(moissonneuse), class: "text-decoration-none" do %>
         <div class="card-product-index" >
