@@ -10,7 +10,7 @@
         <p><strong>Modèle : </strong><%= @moissonneuse.model %></p>
         <p><strong> Marque : </strong><%= @moissonneuse.brand %></p>
       </div>
-      <h2 class="card-trip-pricing"><%= @moissonneuse.price € %></h2>
+      <h2 class="card-trip-pricing"><%= @moissonneuse.price %>€</h2>
       <div class="buttons_switch d-flex">
         <div class="btn btn-light ">
           <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
@@ -43,6 +43,6 @@
     </form>
   </div>
 </div>
-  <%= link_to 'Revenir à la liste des moissonneuses', moissonneuses_path(@moissonneuse), id: "link" %>
+<%= link_to 'Revenir à la liste des moissonneuses', moissonneuses_path(@moissonneuse), id: "link" %>
 
 

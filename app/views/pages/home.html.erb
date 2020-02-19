@@ -10,7 +10,7 @@
       <%= simple_form_for :search, url: moissonneuses_path, method: :get do |f| %>
         <div class="row">
           <div class="col-3">
-            <%= f.input :region, placeholder: 'Region, Ville, Adresse', label: false %>
+            <%= f.input :region, placeholder: 'Region, Ville, ...', label: false %>
           </div>
           <div class="col-3">
             <%= f.input :start_date, input_html: { class: 'flatpickr' }, label: false, placeholder: 'Date de début' %>
