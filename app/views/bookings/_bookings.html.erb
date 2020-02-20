@@ -1,0 +1,15 @@
+<% bookings.each do |booking| %>
+  <div class="card-product mt-2">
+    <%= cl_image_tag(booking.moissonneuse.photo.key, crop: :fill) %>
+    <div class="card-product-infos">
+      <h2>Nom : <%= booking.moissonneuse.name %></h2>
+    </div>
+    <p>Infos : </p>
+      <div class="col">
+        <p><%= "#{booking.user.email} - Du #{booking.starting_date} au #{booking.ending_date}" %></p>
+        <p>Location de la moissonneuse: <em><%= booking.moissonneuse.name %></em> pendant <%= booking.length_in_days %> jours, pour un prix total de <%= booking.price %> €.</p>
+      </div>
+  </div>
+<% end %>
+
+
