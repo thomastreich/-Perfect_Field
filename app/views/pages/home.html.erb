@@ -6,19 +6,13 @@
     <div class="d-flex justify-content-center align-items-center">
       <h1> en <strong>Massey Fergusson</strong>!</h1>
     </div>
-     <div class="d-flex justify-content-center align-items-center m-4 px-0 pb-3">
+     <div class="d-flex justify-content-center align-items-center m-4 px-0">
       <%= simple_form_for :search, url: moissonneuses_path, method: :get do |f| %>
         <div class="row">
-          <div class="col-3">
+          <div class="col-8">
             <%= f.input :region, placeholder: 'Region, Ville, ...', label: false %>
           </div>
-          <div class="col-3">
-            <%= f.input :start_date, input_html: { class: 'flatpickr' }, label: false, placeholder: 'Date de début' %>
-          </div>
-          <div class="col-3">
-            <%= f.input :end_date, input_html: { class: 'flatpickr' }, label: false, placeholder: 'Date de fin' %>
-          </div>
-          <div class="col-3">
+          <div class="col-4">
             <%= f.submit 'Rechercher', class: 'btn btn-primary' %>
           </div>
         </div>
@@ -40,7 +34,7 @@
         <h2>Moissonneuse Super</h2>
         <p>Meilleure moissonneuse du moment !</p>
       </div>
-      <h2 class="card-trip-pricing">€70,000</h2>
+      <h2 class="card-trip-pricing">1700€/jour</h2>
 <!--       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
   </div>
@@ -53,7 +47,7 @@
         <h2>Moissonneuse VLPC5</h2>
         <p>Rapport qualité prix garanti </p>
       </div>
-      <h2 class="card-trip-pricing">€22,000</h2>
+      <h2 class="card-trip-pricing">1200€/jour</h2>
  <!--      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
   </div>
@@ -65,7 +59,7 @@
         <h2>Moissonneuse Super +</h2>
         <p>Un modèle révolutionnaire</p>
       </div>
-      <h2 class="card-trip-pricing">€50,000</h2>
+      <h2 class="card-trip-pricing">2500€/jour</h2>
 <!--       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
   </div>
