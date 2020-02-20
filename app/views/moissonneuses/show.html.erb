@@ -1,4 +1,4 @@
-<div class="container d-flex bg-white mb-3">
+<div class="container d-flex bg-white mb-3 pb">
   <div class="container mt-3">
     <%= cl_image_tag(@moissonneuse.photo.key, height: 400, width: 600, crop: :fill) %>
     <div class="card-trip w-100">
@@ -38,11 +38,11 @@
   </div>
 
   <div class="container">
-    <div id="form" class="lines offset-12 border w-100 mt-3 mr-1 p-3">
+    <div id="form" class="lines offset-12 brd w-100 mt-3 mr-1 p-3">
       <h2>Réservez cette moissonneuse</h2>
       <%= simple_form_for [@moissonneuse, @booking] do |f| %>
-        <%= f.input :starting_date %>
-        <%= f.input :ending_date %>
+        <%= f.input :starting_date, label: "Date de début" %>
+        <%= f.input :ending_date, label: "Date de fin" %>
         <%= f.input :price, disabled: true, input_html: {value: "#{@moissonneuse.price} €"}  %>
         <%= link_to "Réserver", bookings_path(@booking), class: 'btn btn-primary' %>
       <% end %>
