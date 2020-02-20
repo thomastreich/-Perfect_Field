@@ -2,7 +2,7 @@ class MoissonneusesController < ApplicationController
   before_action :set_moissonneuse, only: [:edit, :update, :destroy]
 
   def index
-    @moissonneuses = policy_scope(Moissonneuse).limit(12)
+    @moissonneuses = policy_scope(Moissonneuse).order("created_at DESC")
 
     @markers = @moissonneuses.geocoded.map do |moissonneuse|
       {
