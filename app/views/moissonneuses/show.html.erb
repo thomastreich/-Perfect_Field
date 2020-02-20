@@ -12,16 +12,18 @@
       </div>
       <h2 class="card-trip-pricing"><%= @moissonneuse.price %>€</h2>
       <div class="buttons_switch d-flex">
-        <div class="btn btn-light ">
-          <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
-            <i class="far fa-trash-alt"></i>
-          <% end %>
-        </div>
-        <div class="btn btn-light ml-2 ">
-          <%= link_to edit_moissonneuse_path(@moissonneuse), class: "edited" do %>
-            <i class="fas fa-edit"></i>
-          <% end %>
-        </div>
+        <% if @moissonneuse.user == current_user %>
+          <div class="btn btn-light ">
+            <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          </div>
+          <div class="btn btn-light ml-2 ">
+            <%= link_to edit_moissonneuse_path(@moissonneuse), class: "edited" do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
