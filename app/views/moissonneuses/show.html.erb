@@ -13,7 +13,7 @@
           <p><strong>Modèle : </strong><%= @moissonneuse.model %></p>
           <p><strong> Marque : </strong><%= @moissonneuse.brand %></p>
         </div>
-        <h2 class="card-trip-pricing"><%= @moissonneuse.price %>€/jour</h2>
+        <h2 class="card-trip-pricing" data-price="<%= @moissonneuse.price %>" ><%= @moissonneuse.price %>€/jour</h2>
         <div class="buttons_switch d-flex">
           <% if @moissonneuse.user == current_user %>
             <div class="btn btn-light">
@@ -43,7 +43,7 @@
       <%= simple_form_for [@moissonneuse, @booking] do |f| %>
         <%= f.input :starting_date %>
         <%= f.input :ending_date %>
-        <%= f.input :price %>
+        <%= f.input :price, disabled: true, input_html: {value: "#{@moissonneuse.price} €"}  %>
         <%= f.submit "Réserver", class: 'btn btn-primary' %>
       <% end %>
     </div>

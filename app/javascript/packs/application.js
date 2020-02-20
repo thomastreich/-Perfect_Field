@@ -10,8 +10,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 import calculatePrice from '../plugins/calculate_price';
 
 document.addEventListener('turbolinks:load', () => {
-  initMapbox();
-  calculatePrice();
+
+
+  if (document.querySelector('#map')) initMapbox();
+  if (document.querySelector('.card-trip-pricing')) calculatePrice();
   // if (document.querySelector('.flatpickr')) {
   //   flatpickr(".flatpickr", {});
   // }
