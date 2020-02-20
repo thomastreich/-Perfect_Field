@@ -1,44 +1,52 @@
-<div class="container d-flex">
-  <div class="card-trip w-100 m-3">
-    <%= cl_image_tag(@moissonneuse.photo.key, crop: :fill) %>
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= @moissonneuse.name %></h2>
-        <p><strong>Description : </strong></p>
-        <p><%= @moissonneuse.description %></p>
-        <p><strong>Nombre de CV : </strong><%= @moissonneuse.power %></p>
-        <p><strong>Modèle : </strong><%= @moissonneuse.model %></p>
-        <p><strong> Marque : </strong><%= @moissonneuse.brand %></p>
+<div class="container d-flex bg-white mb-3">
+  <div class="container mt-3">
+    <%= cl_image_tag(@moissonneuse.photo.key, height: 400, width: 600, crop: :fill) %>
+    <div class="card-trip w-100">
+      <div class="card-trip-infos">
+        <div>
+          <h1><%= @moissonneuse.name %></h1>
+          <br>
+          <h2><strong>Description : </strong></h2>
+          <p><%= @moissonneuse.description %></p>
+          <br>
+          <p><strong>Nombre de CV : </strong><%= @moissonneuse.power %></p>
+          <p><strong>Modèle : </strong><%= @moissonneuse.model %></p>
+          <p><strong> Marque : </strong><%= @moissonneuse.brand %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= @moissonneuse.price %>€/jour</h2>
+        <div class="buttons_switch d-flex">
+          <% if @moissonneuse.user == current_user %>
+            <div class="btn btn-light">
+              <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </div>
+            <div class="btn btn-light ml-2 ">
+              <%= link_to edit_moissonneuse_path(@moissonneuse), class: "edited" do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <h2 data-price="<%= @moissonneuse.price %>" class="card-trip-pricing"><%= @moissonneuse.price %>€/jour</h2>
-      <div class="buttons_switch d-flex">
-        <% if @moissonneuse.user == current_user %>
-          <div class="btn btn-light ">
-            <%= link_to moissonneuse_path(@moissonneuse), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
-              <i class="far fa-trash-alt"></i>
-            <% end %>
-          </div>
-          <div class="btn btn-light ml-2 ">
-            <%= link_to edit_moissonneuse_path(@moissonneuse), class: "edited" do %>
-              <i class="fas fa-edit"></i>
-            <% end %>
-          </div>
-        <% end %>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center mt-4">
+        <%= link_to 'Revenir à la liste des moissonneuses', moissonneuses_path(@moissonneuse), class: 'btn btn-primary' %>
       </div>
     </div>
   </div>
-  <div class="text-description pt-2 text-center">
-  </div>
-  <div class="lines offset-12 border w-100 h-100 m-3 p-2">
-    <p>Réservez cette moissonneuse : </p>
-    <%= simple_form_for [@moissonneuse, @booking] do |f| %>
-      <%= f.input :starting_date, html: {id: 'starting_date'} %>
-      <%= f.input :ending_date, html: {id: 'ending_date'} %>
-      <%= f.input :price, disabled: true, input_html: { value: "#{@moissonneuse.price} €" }%>
-      <%= f.submit "Réserver" %>
-    <% end %>
+
+  <div class="container">
+    <div id="form" class="lines offset-12 border w-100 mt-3 mr-1 p-3">
+      <h2>Réservez cette moissonneuse</h2>
+      <%= simple_form_for [@moissonneuse, @booking] do |f| %>
+        <%= f.input :starting_date %>
+        <%= f.input :ending_date %>
+        <%= f.input :price %>
+        <%= f.submit "Réserver", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
   </div>
 </div>
-<%= link_to 'Revenir à la liste des moissonneuses', moissonneuses_path(@moissonneuse), id: "link" %>
-
 
