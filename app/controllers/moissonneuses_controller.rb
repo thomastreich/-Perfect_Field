@@ -15,6 +15,7 @@ class MoissonneusesController < ApplicationController
 
   def show
     @moissonneuse = Moissonneuse.find(params[:id])
+    @booking = Booking.new
     authorize @moissonneuse
   end
 
