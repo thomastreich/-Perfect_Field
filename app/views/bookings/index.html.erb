@@ -1,0 +1,16 @@
+<div class="title-reservation m-2">
+  <h2>Toutes mes reservations</h2>
+  <br>
+  <br>
+</div>
+<br>
+  <h6>Mes reservations actuelles :</h6>
+<div class="container m-0 d-flex">
+  <%= render "bookings", bookings: @current_bookings %>
+</div>
+ <h6>Mes reservations futures :</h6>
+  <%= render "bookings", bookings: @future_bookings %>
+  <h6>Mes reservations passées :</h6>
+  <%= render "bookings", bookings: @past_bookings %>
+
+
