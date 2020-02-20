@@ -13,7 +13,11 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <div class="content-wrapper">
+    <% if current_page? moissonneuse_path(Moissonneuse.last) %>
+      <div class="content-wrapper content-wrapper-show">
+    <% else %>
+      <div class="content-wrapper">
+    <% end %>
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>
