@@ -10,7 +10,7 @@
       <%= simple_form_for :search, url: moissonneuses_path, method: :get do |f| %>
         <div class="row">
           <div class="col-8">
-            <%= f.input :region, placeholder: 'Region, Ville, ...', label: false %>
+            <%= f.input :brand, label: false, prompt: "Choississez votre région", collection: %w(Auvergne-Rhône-Alpes Bourgogne-Franche-Comté Bretagne Centre-Val-de-Loire Corse Grand-Est Hauts-de-France Ile-de-France Normandie Nouvelle-Aquitaine Occitanie Pays-de-la-Loire Provence-Alpes-Côte-d'Azur) %>
           </div>
           <div class="col-4">
             <%= f.submit 'Rechercher', class: 'btn btn-primary' %>
@@ -35,7 +35,6 @@
         <p>Meilleure moissonneuse du moment !</p>
       </div>
       <h2 class="card-trip-pricing">1700€/jour</h2>
-<!--       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
   </div>
 
@@ -48,7 +47,6 @@
         <p>Rapport qualité prix garanti </p>
       </div>
       <h2 class="card-trip-pricing">1200€/jour</h2>
- <!--      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
   </div>
 
@@ -60,7 +58,6 @@
         <p>Un modèle révolutionnaire</p>
       </div>
       <h2 class="card-trip-pricing">2500€/jour</h2>
-<!--       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
   </div>
 
