@@ -44,7 +44,7 @@
         <%= f.input :starting_date %>
         <%= f.input :ending_date %>
         <%= f.input :price, disabled: true, input_html: {value: "#{@moissonneuse.price} €"}  %>
-        <%= f.submit "Réserver", class: 'btn btn-primary' %>
+        <%= link_to "Réserver", bookings_path(@booking), class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>
