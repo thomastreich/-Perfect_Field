@@ -13,7 +13,7 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <% if current_page? moissonneuse_path(Moissonneuse.last) %>
+    <% if moissonneuses_show? %>
       <div class="content-wrapper content-wrapper-show">
     <% else %>
       <div class="content-wrapper">
