@@ -6,10 +6,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
     @moissonneuse = Moissonneuse.find(params[:moissonneuse_id])
     @booking = Booking.new(booking_params)
     @booking.moissonneuse = @moissonneuse
+    authorize @booking
     if @booking.save
       redirect_to moissonneuse_path(@moissonneuse)
     else
