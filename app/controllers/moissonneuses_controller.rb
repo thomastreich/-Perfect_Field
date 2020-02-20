@@ -4,12 +4,6 @@ class MoissonneusesController < ApplicationController
   def index
     @moissonneuses = policy_scope(Moissonneuse).limit(12)
 
-
-    if params[:search] && params[:search][:region].present?
-      @moissonneuses = @moissonneuses.where(region: params[:search][:region])
-    end
-
-
     @markers = @moissonneuses.geocoded.map do |moissonneuse|
       {
         lat: moissonneuse.latitude,
