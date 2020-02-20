@@ -18,7 +18,7 @@ puts 'Finished users creation!'
 puts 'Creating moissonneuses...'
 
 moissonneuse_1 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2020',
+name: 'La moissonneuse de Bébère',
 description: 'Moi je te la loue après t\'en fais ce que tu veux gadjo',
 address: '29000',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
@@ -31,9 +31,9 @@ moissonneuse_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_1.save!
 
 moissonneuse_2 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2019',
+name: 'Une jolie moissonneuse',
 description: 'Elle est belle, elle coupe et ramasse bien le blé',
-address: '22000',
+address: '56490',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -44,8 +44,8 @@ moissonneuse_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_2.save!
 
 moissonneuse_3 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2018',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'La moissonneuse pratique',
+description: 'C\'est assez pratique comme machine en vrai.',
 address: '29270',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -57,8 +57,8 @@ moissonneuse_3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_3.save!
 
 moissonneuse_4 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2017',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'Loue-moi vite',
+description: 'Moué j\'aimerais bien t\'louer ma bête mon copain',
 address: '56440',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -70,7 +70,7 @@ moissonneuse_4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_4.save!
 
 moissonneuse_5 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2016',
+name: 'Moissonneuse',
 description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
 address: '29200',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
@@ -83,8 +83,8 @@ moissonneuse_5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_5.save!
 
 moissonneuse_6 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2015',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'Moissonneuse beaujolais',
+description: 'Rdv ce soir au PMU d\'Arradon et j\'t\'apprends à la conduire.',
 address: '56610',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -96,9 +96,9 @@ moissonneuse_6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_6.save!
 
 moissonneuse_7 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2014',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
-address: '35580',
+name: 'Moissonneuse du scribe',
+description: 'Il n\'y a pas de bonne ou de mauvaise moissonneuse...',
+address: '35133',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
 power: %w(250, 350, 400, 500).sample,
@@ -109,8 +109,8 @@ moissonneuse_7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_7.save!
 
 moissonneuse_8 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2013',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'Lord of the Moissonneuse',
+description: 'Des pièges anti-hobbit sont intégrés.',
 address: '22630',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -122,8 +122,8 @@ moissonneuse_8.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_8.save!
 
 moissonneuse_9 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2012',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'La Gwenn-ha-du',
+description: 'Yec\'hed mat !! Allez, kenavo !!',
 address: '56380',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -135,8 +135,8 @@ moissonneuse_9.photo.attach(io: file, filename: 'nes.png', content_type: 'image/
 moissonneuse_9.save!
 
 moissonneuse_10 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2011',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'Moissonneuse 1990',
+description: 'Le 3615 moissonneuse ayant fermé, ma machine est dispo ici.',
 address: '22390',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -148,8 +148,8 @@ moissonneuse_10.photo.attach(io: file, filename: 'nes.png', content_type: 'image
 moissonneuse_10.save!
 
 moissonneuse_11 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2010',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'Love moissonneuse',
+description: 'Ma moissonneuse est apparue avec moué dans l\'amour est dans le pré',
 address: '29840',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
@@ -161,8 +161,8 @@ moissonneuse_11.photo.attach(io: file, filename: 'nes.png', content_type: 'image
 moissonneuse_11.save!
 
 moissonneuse_12 = Moissonneuse.new(
-name: 'Moissonneuse-batteuse 2009',
-description: 'Jolie machine. Bon rapport qualité prix. Top du moment.',
+name: 'Moissonneuse arnaque',
+description: 'Envoi moissonneuse au 6 15 15 et tu sauras si elle est faite pour toué gamin.',
 address: '22530',
 brand: ["Massey Ferguson", "John Deer", "Claas", "New Holland", "Case IH", "Fendt", "Dodge", "Laverda", "Deutz-Fahr"].sample,
 model: %w(V100 V210 SL200 SQ300 SL560).sample,
