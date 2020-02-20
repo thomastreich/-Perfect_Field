@@ -4,10 +4,11 @@
     <div class="card-product-infos">
       <h2>Nom : <%= booking.moissonneuse.name %></h2>
     </div>
-    <p>Infos : </p>
+    <h2>Infos : </h2>
       <div class="col">
-        <p><%= "#{booking.user.email} - Du #{booking.starting_date} au #{booking.ending_date}" %></p>
-        <p>Location de la moissonneuse: <em><%= booking.moissonneuse.name %></em> pendant <%= booking.length_in_days %> jours, pour un prix total de <%= booking.price %> €.</p>
+        <h6>Informations complémentaires: </h6>
+        <p> . Location <%= "du #{booking.starting_date} au #{booking.ending_date}" %></p>
+        <p> . Location de la <strong><%= booking.moissonneuse.name %></strong> pendant <strong><%= booking.length_in_days %></strong> jours, pour un prix total de <strong><%= booking.price %> €</strong>.</p>
       </div>
   </div>
 <% end %>
