@@ -1,16 +1,23 @@
 <% bookings.each do |booking| %>
   <div class="card-product mt-2">
-    <%= cl_image_tag(booking.moissonneuse.photo.key, crop: :fill) %>
-    <div class="card-product-infos">
-      <h2>Nom : <%= booking.moissonneuse.name %></h2>
-    </div>
-    <h2>Infos : </h2>
-      <div class="col">
+    <%= link_to moissonneuse_path(booking.moissonneuse) do %>
+      <%= cl_image_tag(booking.moissonneuse.photo.key, crop: :fill) %>
+    <% end %>
+    <div class="card-product-infos d-flex">
+      <div class="nom pr-3 flex-shrink-1">
+        <h6>Nom :</h6>
+        <h2> <%= booking.moissonneuse.name %></h2>
+      </div>
+      <div class="column pl-3 w-100">
         <h6>Informations complémentaires: </h6>
         <p> . Location <%= "du #{booking.starting_date} au #{booking.ending_date}" %></p>
         <p> . Location de la <strong><%= booking.moissonneuse.name %></strong> pendant <strong><%= booking.length_in_days %></strong> jours, pour un prix total de <strong><%= booking.price %> €</strong>.</p>
       </div>
+      <div class="btn-second btn-light">
+        <%= link_to booking_path(booking), method: :delete, data: { confirm: "Vous êtes sur?" }, class: "comeback" do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      </div>
+    </div>
   </div>
 <% end %>
-
-

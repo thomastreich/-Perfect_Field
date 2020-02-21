@@ -4,17 +4,17 @@
 <br>
 <div class="container m-2">
   <h5>Mes réservations actuelles :</h5>
-  <div class="resa_current">
+  <div id="resa-actual" class="resa-container">
   <%= render "bookings", bookings: @current_bookings %>
   </div>
   <br>
  <h5>Mes réservations futures :</h5>
- <div class="resa_future mt-2">
+ <div id="resa-futur" class="resa-container mt-2">
   <%= render "bookings", bookings: @future_bookings %>
  </div>
  <br>
   <h5>Mes réservations passées :</h5>
-  <div class="resa_past">
+  <div id="resa-past" class="resa-container">
   <%= render "bookings", bookings: @past_bookings %>
   </div>
 </div>
