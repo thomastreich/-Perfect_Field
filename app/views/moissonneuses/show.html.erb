@@ -40,11 +40,11 @@
   <div class="container">
     <div id="form" class="lines offset-12 brd w-100 mt-3 mr-1 p-3">
       <h2>Réservez cette moissonneuse</h2>
-      <%= simple_form_for [@moissonneuse, @booking] do |f| %>
+      <%= simple_form_for([@moissonneuse, @booking]) do |f| %>
         <%= f.input :starting_date, label: "Date de début" %>
         <%= f.input :ending_date, label: "Date de fin" %>
         <%= f.input :price, disabled: true, input_html: {value: "#{@moissonneuse.price} €"}  %>
-        <%= link_to "Réserver", bookings_path(@booking), class: 'btn btn-primary' %>
+        <%= f.submit "Réserver", class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>

@@ -1,10 +1,11 @@
 class BookingsController < ApplicationController
   def index
-    # @moissonneuse = Moissonneuse.find(params[:moissonneuse_id])
+    @moissonneuse = Moissonneuse.all
     @bookings = policy_scope(Booking) # All bookings for this moissonneuse
     @past_bookings = policy_scope(Booking).past
     @current_bookings = policy_scope(Booking).current
     @future_bookings = policy_scope(Booking).future
+
   end
 
   def create
@@ -13,11 +14,19 @@ class BookingsController < ApplicationController
     @booking.moissonneuse = @moissonneuse
     @booking.user = current_user
     authorize @booking
-    if @booking.save!
-      redirect_to moissonneuse_bookings_path(@moissonneuse)
+    if @booking.save
+      redirect_to bookings_path
     else
       render :new
     end
+  end
+
+  def destroy
+    # @booking.user = current_user
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+    redirect_to bookings_path
   end
 
   private

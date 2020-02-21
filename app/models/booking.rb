@@ -20,10 +20,5 @@ class Booking < ApplicationRecord
   end
 
   def moissonneuse_date_uniqueness
-
   end
 end
-
-  # def dates?
-  #   starting_date < ending_date
-  # end
