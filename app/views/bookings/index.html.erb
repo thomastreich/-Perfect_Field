@@ -1,22 +1,25 @@
-<div class="title-reservation m-2">
-  <h2>Toutes mes reservations</h2>
-</div>
-<br>
-<div class="container m-2">
-  <h5>Mes réservations actuelles :</h5>
-  <div id="resa-actual" class="resa-container">
-  <%= render "bookings", bookings: @current_bookings %>
+<div class="container vh-100 bg-2">
+  <div class="title-reservation m-2">
+    <h2> <strong>Toutes mes reservations</strong> </h2>
   </div>
   <br>
- <h5>Mes réservations futures :</h5>
- <div id="resa-futur" class="resa-container mt-2">
-  <%= render "bookings", bookings: @future_bookings %>
- </div>
- <br>
-  <h5>Mes réservations passées :</h5>
-  <div id="resa-past" class="resa-container">
-  <%= render "bookings", bookings: @past_bookings %>
+  <div class="container m-2">
+    <h5> <strong>Mes réservations actuelles :</strong> </h5>
+    <div id="resa-actual" class="resa-container">
+    <%= render "bookings", bookings: @current_bookings %>
+    </div>
+    <br>
+   <h5> <strong>Mes réservations futures :</strong> </h5>
+   <div id="resa-futur" class="resa-container mt-2">
+    <%= render "bookings", bookings: @future_bookings %>
+   </div>
+   <br>
+    <h5> <strong>Mes réservations passées :</strong> </h5>
+    <div id="resa-past" class="resa-container">
+    <%= render "bookings", bookings: @past_bookings %>
+    </div>
   </div>
 </div>
+
 
 
